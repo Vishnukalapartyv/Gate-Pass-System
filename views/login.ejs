@@ -1,0 +1,40 @@
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="icon" type="x-icon" href="/images/logo.png">
+	<title>Login</title>
+	
+</head>
+<body>
+	<div>
+		<h2>Hindalco Industries</h2> 
+	</div>
+	<div id="body">
+		<form method="POST" action="/login" class="form-horizontal">
+			<table class="form-group ">
+ 				<br>
+ 				<tr>
+ 					<td class="right">Email: </td>
+ 					<td><input autofocus="enabled" class="form-control left" type="email" name="username" placeholder="Enter your email" required="required"></td>
+ 				</tr>
+ 				<tr>
+ 					<td class="right">Password: </td>
+ 					<td><input class="form-control left" type="password" name="password" placeholder="Enter your password" required="required"></td>
+ 				</tr>
+			</table>
+			<div style="margin-left:auto;margin-right:auto;width:0;display: inline;">
+				<button value="Log In" name="submit" placeholder="Submit" style="display: inline;" class="btn white">
+					Log In
+				</button>
+				<br>
+				<a href="/register"><input class="btn white"type="button" value="Create New Account" name="createnew"></a>
+				<p style="display: inline;">&#xb7;</p>
+				<a href="/forgot"><input class="btn white"type="button" value="Forgot Password" name="createnew"></a>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

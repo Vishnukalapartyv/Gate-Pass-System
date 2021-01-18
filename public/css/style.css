@@ -1,0 +1,65 @@
+	@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+	@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+	
+	table{
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 10px;
+			border-spacing: 10px;
+			margin: auto;
+			box-shadow: 0 0 10px;
+			background-color:#fff;
+			width: 600px; 
+	}
+	td {
+			padding: 10px;
+			width: 200px;
+	}
+	input{
+			margin: auto;
+	}
+	.hidden{
+			display: none;
+	}
+	.right{
+			text-align: right;
+	}
+	.left{
+			text-align: left;
+	}
+	.center{
+		text-align: center;
+	}
+	body{
+		font-family: 'Roboto', sans-serif;
+		/*background-image:linear-gradient(to right,#5d1e22,#cd5554); */
+		height: 100%;
+	}
+	#body {
+		align-content: center;
+		text-align: center;
+		background-image:linear-gradient(#000409,#002a56);
+		height: 100%;
+	}
+	h2{
+		background-image:linear-gradient(#002a56,#000409);
+		position: relative;
+		color: #789789;
+		width: 100%;
+		display: block;margin: auto;
+		padding-bottom: 20px;
+		text-align:center;
+		padding-top:20px;
+		font-style: bold;
+		font-family: 'Oswald', sans-serif;
+		font-size: 60px;
+
+	}
+	.white{
+		color:white;
+	}
+	svg {/*
+		box-shadow: 0 0 10px blue;*/
+		height: 100px;
+		background-color: rgba(0,0,0,0); 
+	}

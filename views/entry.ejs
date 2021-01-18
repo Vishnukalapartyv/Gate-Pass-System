@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function getDate() {
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1;
+		var yyyy = today.getFullYear();
+		var ddt = today.getDate()+1;
+		if(dd<10) {
+		    dd = '0'+dd;
+		    ddt = '0'+ddt;
+		}
+		if(ddt === '010'){
+			ddt	= '10';
+		} 
+		if (ddt==='32') {
+			ddt='01';
+			mm=mm+1
+		}
+		if (ddt==='32' && mm==='12') {
+			ddt='01';
+			mm='01';
+			yyyy=yyyy+1;
+		}
+		
+		if(mm<10) {
+		    mm = '0'+mm;
+		} 
+		today = yyyy + '-' + mm + '-' + dd;
+		tom = yyyy + '-' + mm + '-' + ddt;
+		console.log(today);
+		document.getElementById("outdate").value = today;
+		document.getElementById("returndate").value = tom;
+		};
+
+		function capitalise(name) {
+			var str = document.getElementById(name).value;
+			str = str.toLowerCase().replace(/([^a-z]|^)([a-z])(?=[a-z]{2})/g, function(_, g1, g2) {
+			return g1 + g2.toUpperCase(); } );
+			document.getElementById(name).value = str;
+		};
+
+		window.onload = function() {
+		  getDate();
+		};
+
+		var show = function (element1) {
+			document.getElementById(element1).disabled=false;
+		};
+
+		var hide = function (element2) {
+			document.getElementById(element2).disabled=true;
+		};
+	</script>
+	
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="icon" type="x-icon" href="/images/logo.png">
+	<title>Add New Object</title>
+</head>
+<body>
+	<div>
+		<h2>Hindalco Industries</h2> 
+	</div>
+	<div id="body">
+		<div style="text-align: center;" class="white">Welcome <%= name %></div>
+		<div style="text-align:center;"><a href="/logout"><input type="button" value="Log Out" style="color:#fff;" style="display: inline;" class="btn"></a></div>
+		<form method="POST" action="" class="form-horizontal" id="form">
+			<table style="align-items: center;" class="form-group ">
+ 				<tr>
+ 					<td class="right">Name of the person: </td>
+ 					<td><input class="form-control" id="name" type="text" name="name" value="<%= name  %>" placeholder="Enter your name" onkeyup="capitalise('name')" autofocus="enabled" required="required"></td>
+ 				</tr>
+				<tr>
+					<td class="right">Name of the Object: </td>
+					<td><input  class="form-control" id="obj" type="text" name="objectname" id="object" placeholder="Name of the Object" onkeyup="capitalise('obj')" required="required"></td>
+				</tr>
+				<tr>
+					<td class="right">Description: </td>
+					<td><input class="form-control" type="text" name="description" placeholder="Enter Description" rows="3"  required="required"></td>
+				</tr>
+				<tr>
+					<td class="right">Out Date: </td>
+					<td><input  class="form-control" type="date" id="outdate" name="outdate" value="" placeholder="Date of taking out" required="required"></td>
+				</tr>
+				<tr>
+					<div id="retnonret" class="">
+						<label><td><input class="form-control-input" type="radio" name="return" id="ret" value="1" onclick="show('returndate')" checked="checked"> Returnable </td></label>
+						<label><td><input class="form-control-input" type="radio" name="return" id="nonret" value="0" onclick="hide('returndate')" > Non Returnable </td></label>
+					</div>
+				</tr>
+				<tr id="retdate">
+					<td class="right">Return date: </td>
+					<td><input  class="form-control" type="date" id="returndate" name="returndate" placeholder="Return Date"></td>
+				</tr>
+			</table>
+			<div style="margin-left:auto;margin-right:auto;width:0;display: inline;">
+				<input type="submit" name="submit" placeholder="Submit" style="display: inline;" class="btn white" value="Submit">
+				<input type="reset" style="display: inline;" class="btn white" onclick="getDate();">
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
