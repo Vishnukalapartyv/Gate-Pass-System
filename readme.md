@@ -1,7 +1,7 @@
 #  ![](/[https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH507jIn1YGin5g7nxVAYIXcISqA4ZugTTDL1wrFd-_zDs77Y4](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH507jIn1YGin5g7nxVAYIXcISqA4ZugTTDL1wrFd-_zDs77Y4) "Logo") <u> Hindalco Industries Limited
 ## Gate Pass Management System
 
-Working under the Practice School - 1 Program of BITS Pilani Hyderabad Campus, we were alloted a project under Hindalco Industries, Renusagar. We were given an IT project to make a web app where we can log and authenticate the movement of items through the gate. So this is the project here.
+A web app where we can log and authenticate the movement of employees in and out of the premises. So this is the project here.
 
 ### Softwares and Packages Used
 1. Express JS
